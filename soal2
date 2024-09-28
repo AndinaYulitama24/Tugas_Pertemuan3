@@ -1,1 +1,30 @@
-
+program cuaca;
+uses crt;
+var 
+suhu : real;
+begin 
+    clrscr;
+    write('Berapakah drajat suhu di luar ruangan kamu :');
+    readln(suhu);
+    if suhu<0 then
+    begin
+        writeln('Cuaca sangat dingin, jangan lupa pakai jaket tebal!');
+    end
+    else if suhu <= 15  then
+    begin
+        writeln('Cuaca dingin,pakai jaket ya!');
+    end
+    else if suhu <= 25 then
+    begin
+        writeln('Cuaca nyaman, cocok untuk jalan-jalan.');
+    end
+    else if suhu <= 35 then
+    begin
+        writeln('Cuaca hangat, tetap terhidrasi');
+    end
+    else 
+    begin
+        writeln('Cuaca sangat panas,hindari sinar matahari langsung!');
+    end;
+          
+end.
