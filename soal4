@@ -1,1 +1,48 @@
+program konversisuhu ;
+uses crt;
+var
+  pilihan : integer;
+  suhu, hasil : real;
 
+begin
+    clrscr;
+    writeln('Pilih suhu:');
+    writeln('1 : Celsius ke Fahrenheit');
+    writeln('2 : Fahrenheit ke Celsius');
+    writeln('3 : Celsius ke Kelvin');
+    writeln('4 : Kelvin ke Celsius');
+    write('pilihlah suhu yang mau kamu konversikan : ');
+    readln(pilihan);
+if pilihan = 1 then
+begin
+    write('Masukkan angka suhu Celsius :');
+    readln(suhu);
+    hasil := (suhu * 9/5)+32;
+    writeln('Hasil suhu Fahrenheit :',hasil:0:2,'F');
+end
+else if pilihan = 2 then
+begin
+    write('Masukkan angka suhu Fahrenheit : ');
+    readln(suhu);
+    hasil := (suhu - 32)*5/9;
+    writeln('Hasil konversi celsius :',hasil:0:2,'C');
+end
+else if pilihan = 3 then
+begin
+    write('Masukkan angka suhu Celsius :');
+    readln(suhu);
+    hasil := suhu + 237.15;
+    writeln('Hasil suhu kelvin :',hasil:0:2,'K');
+end
+else if pilihan = 4 then
+begin
+    write('Masukkan angka suhu kelvin : ');
+    readln(suhu);
+    hasil := suhu - 273.15;
+    writeln('Hasil konversi celsius :', hasil:0:2,'C');
+end
+else
+begin
+    writeln('sistem mengalami error!');
+end;
+end.
