@@ -1,1 +1,29 @@
+program kalkulator;
+uses crt;
+var
+nomor : integer;
+a, b, nilai : real;
 
+begin
+    clrscr;
+    writeln(' program kalkulator : ');
+    writeln(' 1. penjumlahan');
+    writeln(' 2. pengurangan');
+    writeln(' 3. perkalian ');
+    writeln(' 4. pembagian');
+    write('silakan pilih nomor yang anda inginkan :');
+    readln(nomor);
+    write('masukan angka pertama :');
+    readln(a);
+    write('masukan angka kedua :');
+    readln(b);
+    case nomor of
+    1 : nilai := a + b;
+    2 : nilai := a - b;
+    3 : nilai := a * b;
+    4 : nilai := a / b;
+    else
+    writeln('sistem mengalami Error');
+    end;
+    writeln('Hasil yang didapat adalah :',nilai:1:2);
+end.
